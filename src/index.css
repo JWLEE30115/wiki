@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", "Inter", "Noto Sans KR", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-ink: #000000;
+  --color-paper: #ffffff;
+  --color-accent: #2563eb;
+  --color-gray-light: #f4f4f5;
+  --color-gray-mid: #71717a;
+}
+
+@layer base {
+  body {
+    @apply bg-paper text-ink selection:bg-accent selection:text-white antialiased;
+  }
+}
+
+.markdown-content {
+  @apply max-w-[600px] text-lg leading-[1.6] text-ink;
+}
+
+.markdown-content h1 {
+  @apply text-[84px] leading-[0.85] tracking-[-4px] font-black lowercase mb-12 mt-16;
+}
+
+.markdown-content h2 {
+  @apply text-[42px] leading-[0.9] tracking-[-2px] font-extrabold lowercase border-b-2 border-ink pb-2 mb-8 mt-14;
+}
+
+.markdown-content h3 {
+  @apply text-xl font-bold uppercase tracking-tight mb-4 mt-8;
+}
+
+.markdown-content p {
+  @apply mb-6;
+}
+
+.markdown-content ul {
+  @apply mb-6 list-disc pl-6 space-y-2;
+}
+
+.markdown-content ol {
+  @apply mb-6 list-decimal pl-6 space-y-2;
+}
+
+.markdown-content a {
+  @apply text-accent font-semibold hover:underline decoration-2 underline-offset-4;
+}
+
+.markdown-content blockquote {
+  @apply border-l-4 border-ink pl-6 italic text-gray-mid my-8;
+}
+
+.markdown-content code {
+  @apply bg-gray-light px-1.5 py-0.5 rounded font-mono text-sm;
+}
+
+.markdown-content pre {
+  @apply bg-ink text-paper p-6 rounded-none mb-8 overflow-x-auto;
+}
+
+.markdown-content pre code {
+  @apply bg-transparent p-0 text-paper leading-normal;
+}
+
+.markdown-content img {
+  @apply border-2 border-ink my-10 max-w-full h-auto;
+}
+
+.markdown-content hr {
+  @apply border-gray-light my-12;
+}
+
+.bold-border {
+  @apply border-2 border-ink;
+}
+
+.meta-label {
+  @apply text-[12px] font-bold uppercase tracking-wider text-gray-mid;
+}
